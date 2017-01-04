@@ -1,7 +1,28 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: thomas
- * Date: 2017-01-01
- * Time: 6:02 PM
- */
+
+use Illuminate\Database\Seeder;
+use Illuminate\Database\Eloquent\Model;
+use App\Maker;
+Use App\User;
+use Faker\Factory as Faker;
+
+class UserSeed extends Seeder {
+
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+
+
+        User::Create([
+            'email'=> 'fake@fake.com',
+            'password'=>Hash::make('pass')
+
+        ]);
+
+    }
+
+}
